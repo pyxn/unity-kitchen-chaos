@@ -788,6 +788,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640ad6ccd3c4b4938abcbff3bd0bb013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1345160261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6861661087295463367, guid: fb83d9039189e4ecbba87e14af2ab032,
+    type: 3}
+  m_PrefabInstance: {fileID: 791525308}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1742caee4fa4f209ba2d3803ac6369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1461686722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1025,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6861661087295463367, guid: fb83d9039189e4ecbba87e14af2ab032,
+        type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6861661087295463367, guid: fb83d9039189e4ecbba87e14af2ab032,
+        type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 1345160261}
     - target: {fileID: 1004548473599094113, guid: fb83d9039189e4ecbba87e14af2ab032,
         type: 3}
       propertyPath: m_Name
