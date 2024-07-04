@@ -7,6 +7,8 @@ using UnityEngine;
 public class ClearCounter : BaseCounter
 {
 
+
+
     public override void Interact(Player player)
     {
         if (!HasKitchenObject())
@@ -30,7 +32,29 @@ public class ClearCounter : BaseCounter
             if (player.HasKitchenObject())
             {
                 // Player is carrying something
+                // check if the player is holding a plate
+                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
+                {
+                    bool succeeded = plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO());
 
+                    if (succeeded)
+                    {
+                        GetKitchenObject().DestroySelf();
+                    }
+                }
+                else
+                {
+                    // Player is carrying something other than a plate
+                    if (GetKitchenObject().TryGetPlate(out plateKitchenObject))
+                    {
+                        // Counter is holding a plate
+                        bool succeeded = plateKitchenObject.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO());
+                        if (succeeded)
+                        {
+                            player.GetKitchenObject().DestroySelf();
+                        }
+                    }
+                }
             }
             else
             {
