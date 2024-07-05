@@ -12,7 +12,16 @@ public class CuttingCounter : BaseCounter, IHasProgress
     public event EventHandler OnCut;
 
     [SerializeField] private CuttingRecipeSO[] cuttingRecipeSOArray;
-    private int cuttingProgress; 
+    private int cuttingProgress;
+
+    private void Start()
+    {
+        if (cuttingRecipeSOArray.Length <= 0)
+        {
+            Debug.LogError("CuttingCounter.cs: Missing CuttingRecipeSOArray");
+            return;
+        }
+    }
 
     public override void Interact(Player player)
     {
@@ -86,6 +95,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
             {
                 KitchenObjectSO outputKitchenObjectSO = GetOutputForInput(GetKitchenObject().GetKitchenObjectSO());
                 GetKitchenObject().DestroySelf();
+                Instantiate<KitchenObjectSO>(outputKitchenObjectSO);
                 KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
             }
             

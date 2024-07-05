@@ -125,7 +125,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
                 // Can move only on the X
 
                 // Attempt only Z movement
-                Vector3 moveDirZ = new Vector3(0, 0, moveDir.x).normalized;
+                Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
                 canMove = moveDir.z != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
                 if (canMove)
                 {
@@ -143,8 +143,13 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         }
 
         isWalking = moveDir != Vector3.zero;
-        float rotateSpeed = 34f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+
+        // Only rotate if moveDir is not zero
+        if (moveDir != Vector3.zero)
+        {
+            float rotateSpeed = 34f;
+            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+        }
     }
 
     private void SetSelectedCounter(BaseCounter selectedCounter)

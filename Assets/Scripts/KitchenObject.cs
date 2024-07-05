@@ -62,11 +62,31 @@ public class KitchenObject : MonoBehaviour
 
     public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)
     {
+        if (kitchenObjectSO.prefab == null)
+        {
+            Debug.LogError("KitchenObject.cs: KitchenObjectSO Prefab does not exist.");
+            return null;
+        }
+
+        Debug.Log("Spawning kitchen object: " + kitchenObjectSO.prefab.name);
         Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
+        if (kitchenObjectTransform == null)
+        {
+            Debug.LogError("Failed to instantiate prefab: " + kitchenObjectSO.prefab.name);
+            return null;
+        }
+
         KitchenObject kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
+        if (kitchenObject == null)
+        {
+            Debug.LogError("KitchenObject component not found on instantiated prefab: " + kitchenObjectSO.prefab.name);
+            return null;
+        }
+
         kitchenObject.SetKitchenObjectParent(kitchenObjectParent);
         return kitchenObject;
     }
+
 
 
 }

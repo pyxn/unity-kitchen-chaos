@@ -10,7 +10,14 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
     [SerializeField] private Transform counterTopPoint;
     private KitchenObject kitchenObject;
 
-
+    private void Start()
+    {
+        if (counterTopPoint == null)
+        {
+            Debug.LogError("BaseCounter.cs: CounterTopPoint not assigned!");
+            return;
+        }
+    }
     public virtual void Interact(Player player)
     {
         Debug.LogError("BaseCounter.Interact();");
