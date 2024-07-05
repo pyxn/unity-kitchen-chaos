@@ -70,11 +70,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: e21b499d164095947b7559f0267f0e63,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1602772414057533964}
-    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: e21b499d164095947b7559f0267f0e63,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4672871898498249966}
+      addedObject: {fileID: 269297228946728587}
   m_SourcePrefab: {fileID: 100100000, guid: e21b499d164095947b7559f0267f0e63, type: 3}
 --- !u!4 &8454628712039299492 stripped
 Transform:
@@ -88,23 +84,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5396740632977267983}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1602772414057533964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8454628712039299493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6876881d7a984453a8a1b256477690c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platesCounter: {fileID: 6275965556196228972}
-  counterTopPoint: {fileID: 4470892922202823849}
-  plateVisualPrefab: {fileID: 3812876574508226176, guid: c0c9afd619b40914a8f625c0535e2284,
-    type: 3}
---- !u!114 &4672871898498249966
+--- !u!114 &269297228946728587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,10 +200,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: e21b499d164095947b7559f0267f0e63,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1039456053480578819}
-    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: e21b499d164095947b7559f0267f0e63,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 970785154472974169}
   m_SourcePrefab: {fileID: 100100000, guid: e21b499d164095947b7559f0267f0e63, type: 3}
 --- !u!1 &7991146500242840671 stripped
@@ -244,22 +220,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5834165862325275435}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1039456053480578819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8018357832732028801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6876881d7a984453a8a1b256477690c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platesCounter: {fileID: 6275965556196228972}
-  counterTopPoint: {fileID: 4470892922202823849}
-  plateVisualPrefab: {fileID: 3812876574508226176, guid: c0c9afd619b40914a8f625c0535e2284,
-    type: 3}
 --- !u!114 &970785154472974169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 6261415440456831932, guid: 2efddd8d3fd8d452ca70b459efb59782,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.288
+      value: 1.309
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -359,10 +319,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6275965556196228972}
-    - targetCorrespondingSourceObject: {fileID: 1004548473599094113, guid: 2efddd8d3fd8d452ca70b459efb59782,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 673719329000896131}
   m_SourcePrefab: {fileID: 100100000, guid: 2efddd8d3fd8d452ca70b459efb59782, type: 3}
 --- !u!4 &4470892922202823849 stripped
 Transform:
@@ -377,21 +333,6 @@ GameObject:
   m_PrefabInstance: {fileID: 7561202135059549973}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &6275965556196228972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7286286279672504948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e24f16a727212448cbdbe5c077012048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counterTopPoint: {fileID: 4470892922202823849}
-  plateKitchenObjectSO: {fileID: 11400000, guid: da7315200103343409bacdd459f30a43,
-    type: 2}
---- !u!114 &673719329000896131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
