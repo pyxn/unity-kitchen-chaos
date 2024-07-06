@@ -34,8 +34,6 @@ public class PlateCompleteVisual : MonoBehaviour
     {
         foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
         {
-            Debug.Log("KITCHENSO_GAMEOBJECT: ");
-            Debug.Log("\tkitchenObjectSOGameObject");
             if (kitchenObjectSOGameObject.kitchenObjectSO == e.kitchenObjectSO)
             {
                 
@@ -43,4 +41,5 @@ public class PlateCompleteVisual : MonoBehaviour
             }
         }
     }
+
 }
