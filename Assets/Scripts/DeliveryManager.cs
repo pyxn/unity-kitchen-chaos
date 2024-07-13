@@ -81,7 +81,7 @@ public class DeliveryManager : MonoBehaviour
         }
         // No matches found!   
         // Player did not deliver a correct recipe
-        Debug.Log("Player did not deliver a correct recipe!");
+        // Debug.Log("Player did not deliver a correct recipe!");
     }
 
     public List<RecipeSO> GetWaitingRecipeSOList()
