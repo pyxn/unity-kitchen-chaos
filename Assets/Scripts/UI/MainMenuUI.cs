@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
-{
+{ 
     [SerializeField] private Button playButton;
     [SerializeField] private Button quitButton;
 
@@ -20,6 +20,6 @@ public class MainMenuUI : MonoBehaviour
         quitButton.onClick.AddListener(() => {
             Application.Quit();
         });
-
+        Time.timeScale = 1f;
     }
 }
